@@ -1,14 +1,13 @@
 import React from 'react'
-import { View, SafeAreaView, StyleSheet, Text, ImageBackground, Dimensions } from 'react-native';
+import { View, StyleSheet, Text, ImageBackground } from 'react-native';
 import { TextInput, Button } from 'react-native-paper';
 
-const image = { uri: "https://media.istockphoto.com/photos/vegetable-and-fruits-on-white-wood-background-flat-lay-picture-id936505934?s=2048x2048" };
-const { width: WIDTH } = Dimensions.get('window')
+// const { width: WIDTH } = Dimensions.get('window')
+// const image = { uri: 'https://i.picsum.photos/id/1003/1181/1772.jpg?hmac=oN9fHMXiqe9Zq2RM6XT-RVZkojgPnECWwyEF1RvvTZk' }
 
 export default function Login({ navigation }) {
     return (
-        <ImageBackground source={image} style={styles.backgroundImage}
-        >
+        // <ImageBackground style={styles.backgroundImage} sizeMode='cover' source={image}>
             <View style={styles.loginContainer}>
                 <TextInput
                     style={styles.input}
@@ -30,31 +29,33 @@ export default function Login({ navigation }) {
                 </Button>
             </View>
 
-        </ImageBackground>
-
+        // </ImageBackground>
     )
 }
 const styles = StyleSheet.create({
     loginContainer: {
         backgroundColor: `#deb887`,
         padding: 30,
+        flex: 1,
         borderRadius: 15,
+        alignItems: 'center',
+        justifyContent: 'center',
 
     },
-    backgroundImage: {
-        width: 'null',
-        height: 'null',
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-    },
+    // backgroundImage: {
+    //     width: 'auto',
+    //     height: 'auto',
+    //     flex: 1,
+    //     justifyContent: 'center',
+    //     alignItems: 'center',
+    // },
     input: {
         width: 300,
         height: 40,
-        //     // paddingLeft: 45,
-        //     marginHorizontal: 25,
-        //     fontSize: 16,
-        //     // backgroundColor: 'red',
-        //     borderRadius: 25,
+        // paddingLeft: 45,
+        marginHorizontal: 25,
+        fontSize: 16,
+        // backgroundColor: 'red',
+        borderRadius: 25,
     },
 });
