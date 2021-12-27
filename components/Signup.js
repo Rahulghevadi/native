@@ -61,13 +61,6 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         // margin: 10,
     },
-//     image: {
-//         width: 'null',
-//         height: 'null',
-//         flex: 1,
-//         justifyContent: 'center',
-//         alignItems: 'center',
-//     },
 })
 
 
